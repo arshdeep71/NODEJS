@@ -4,7 +4,7 @@ const app = express()
 app.listen(8080,()=>{
     console.log("Server Started");
 });
-app.get("/",(req,res)=>{
+app.get("/home",(req,res)=>{
     console.log(req.url);
-    res.send("response from server for /");
+    res.send("You are redirected to home");
 })
