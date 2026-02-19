@@ -17,7 +17,7 @@ app.get("/x/:id1/y/:id2/z/:id3",(req,res)=>{
 });
 
 
-app.get("/:a/:b/:c/:d",(req,res)=>{
+app.get("/a/b/c/d",(req,res)=>{
     console.log(req.params);
     res.send("Hello Students");
 });
