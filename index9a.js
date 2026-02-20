@@ -4,7 +4,7 @@ const app = express();
 
 const auth = (req, res, next) => {
   if (req.path === "/1234") {
-    next(); // allow
+    next(); 
   } else {
     res.send("Access Denied");
   }
