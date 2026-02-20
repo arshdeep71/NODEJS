@@ -5,8 +5,8 @@ const app = express();
 app.use(express.json());
 
 const auth = (req, res, next) => {
-  const token = req.headers.authorization; // "Bearer 1234"
-  const val = token.split(" "); // ["Bearer", "1234"]
+  const token = req.headers.authorization; 
+  const val = token.split(" "); 
 
   if (val[1] === "1234") {
     next();
