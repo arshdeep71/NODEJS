@@ -8,7 +8,7 @@ const logger = (req,res,next)=>{
     req.message = "This is logger function";
     // console.log(req.url);
     next()
-}
+};
 // app.use(logger); 
 
 app.get("/",logger,(req,res)=>{
@@ -16,7 +16,7 @@ app.get("/",logger,(req,res)=>{
     console.log(req.message);
     res.json(req.url);
  
-})
+});
 
 app.get("/home",(req,res)=>{
     // res.end()
@@ -25,4 +25,4 @@ app.get("/home",(req,res)=>{
     console.log(req.message);
     res.json(req.url);
  
-})
+});
