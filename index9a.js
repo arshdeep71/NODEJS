@@ -9,8 +9,6 @@ const auth = (req, res, next) => {
     res.send("Access Denied");
   }
 };
-
-
 app.use(auth);
 
 app.get("/1234", (req, res) => {
