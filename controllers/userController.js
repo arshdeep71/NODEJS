@@ -1,7 +1,11 @@
-export function getUser(req, res) {
-  res.send("This is get request of userRouter");
+import { users } from "../models/userModel.js";
+
+const getUser= (req, res)=> {
+  res.send(users);
 }
 
-export function postUser(req, res) {
+const postuser = (req, res)=> {
   res.send("This is post request of userRouter");
 }
+
+export{getUser,postuser};
