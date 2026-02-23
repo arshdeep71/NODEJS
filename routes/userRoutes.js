@@ -1,12 +1,13 @@
-const userRouter = express.Router();
+import express from "express";
 
+const productRouter = express.Router();
 
-userRouter.get("/",(req,res)=>{
-    res.send("This is get request of userRouter");
-})
+productRouter.get("/", (req, res) => {
+  res.send("This is get request of productRouter");
+});
 
-userRouter.post("/",(req,res)=>{
-    res.send("This is post request of userRouter");
-})
+productRouter.post("/", (req, res) => {
+  res.send("This is post request of productRouter");
+});
 
-app.use("/api/users",userRouter);
+export default productRouter;

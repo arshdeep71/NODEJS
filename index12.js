@@ -1,30 +1,10 @@
 import express from "express";
+import productRoutes from "./routes/productRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 
 const app = express();
-app.listen(8080, ()=>console.log("Server Started"));
 
+app.use("/users", userRoutes);
+app.use("/products", productRoutes);
 
-const userRouter = express.Router();
-const productRouter = express.Router();
-
-
-userRouter.get("/",(req,res)=>{
-    res.send("This is get request of userRouter");
-})
-
-userRouter.post("/",(req,res)=>{
-    res.send("This is post request of userRouter");
-})
-
-
-
-productRouter.get("/",(req,res)=>{
-    res.send("This is get request of productRouter");
-})
-
-productRouter.post("/",(req,res)=>{
-    res.send("This is post request of productRouter");
-})
-
-app.use("/api/users",userRouter);
-app.use("/api/products",productRouter);
+app.listen(8080, () => console.log("Server Started"));
